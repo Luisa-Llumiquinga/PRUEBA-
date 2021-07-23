@@ -1,6 +1,6 @@
 # PROYECTO FINAL 💻 USO DE CLASES Y OBJETOS EN C++ ⚙
 
-**Participantes** 💡
+**Participantes**  💡 
 
 ✔**Acosta Apunte Dayana Cristina** 🌸 
 
@@ -60,8 +60,7 @@ En el primer archivo (PRINCIPAL.cpp) contiene librerias de varios tipos:
 
 🔸 Stdlib: contiene los prototipos de funciones de C para gestión de memoria dinámica, control de procesos y otras. 
 
-
-## INSTALACIÓN 🔗 
+## INSTALACIÓN 🔧
 
 
 
