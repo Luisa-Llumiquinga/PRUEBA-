@@ -46,9 +46,9 @@ Dentro de este archivo se encuentra la funcion principal (int main), en la cual 
 
 Este proyecto incluye los archivos antes mencionados ( PRINCIPAL.CPP y colaboradores.h ) 
 
-(IMAGEN DE LOS DOS ARCHIVOS)
+![](https://i.ibb.co/c1frn8H/Whats-App-Image-2021-07-23-at-6-01-30-PM.jpg)
 
-En el primer archivo (PRINCIPAL.cpp) contiene librerias de varios tipos:
+En el primer archivo llamado (PRINCIPAL.cpp) contiene librerias las cuales van acompañadas con un #include, mas abajo se encuentra el "using namespace std" que usamos para espacios de nombres y no colocar el std en cada linea, ademas de hacer el llamado al archivo colaboradores.h. Entre los tipos de librerias usadas estan: 
 
 🔸 Iostream:es una libreria estándar de entrada y salida.  
 
@@ -60,13 +60,150 @@ En el primer archivo (PRINCIPAL.cpp) contiene librerias de varios tipos:
 
 🔸 Stdlib: contiene los prototipos de funciones de C para gestión de memoria dinámica, control de procesos y otras. 
 
-## INSTALACIÓN 🔧
+![](https://i.ibb.co/6WzJy0g/Whats-App-Image-2021-07-23-at-6-01-42-PM.jpg)
+
+Encontramos en el archivo (PRINCIPAL.cpp) tenemos la funcion principal "int main"
+
+En esta funcion se declaran las variables de tipo entero (int) y de tipo flotante (float) que nos transfieren los datos del otro archivo, además el llamado a la clase que se encuentra el el otro archivo (colaboradores.h). Se hace el llamado a una clase donde se coloca primero el nombre de la clase y luego  un apodo u otro nombre como se visualiza en la imagen. 
+
+![](https://i.ibb.co/0mXPtjz/Whats-App-Image-2021-07-23-at-6-01-53-PM.jpg)
+
+Luego se crea un menú que le permite al usuario ingresar una opción.
+
+##### Opciones: 
+
+1. Designa la función y  la clase (PEPE.ingresar)(PEPE.mostrar), esta opción le permite al usuario insertar sus datos personales y luego mostrarlos.
+
+2. Llama a la clase y la funcion (PEPE.edad)(PEPE.edad2), esta opción permite la fecha actual y luego mediante la resta con la fecha de nacimiento hace el cálculo de la edad y la muestra en pantalla.
+
+3. Hace el llamado a la clase y funcion (PEPE.IMC), esta opción le permite al usuario calcular su índice de masa corporal usando su peso y su altura.
+
+4. Designa la clase y la función (PEPE.guardar), esta  le permite al usuario crear un archivo txt y guardar los datos registrados.
+
+5. Hace el llamado a la clase y la función (PEPE.rym),esta opción le permite al usuario recuperar los datos guardados en el archivo txt y mostrarlo por pantalla.
+
+![](https://i.ibb.co/MS3Mqg2/Whats-App-Image-2021-07-23-at-6-02-56-PM.jpg)
+![](https://i.ibb.co/cN5JJTC/Whats-App-Image-2021-07-23-at-6-03-04-PM.jpg)
+
+En el siguiente archivo (colaboradores.h) se encuentran la clase (class Persona) y las funciones empleadas. 
+
+En Class Persona se declaran los datos privados del usuario, estos no pueden ser alterados.
+![](https://i.ibb.co/DfYdZ7f/Whats-App-Image-2021-07-23-at-6-03-13-PM.jpg)
+
+Se declara datos públicos, dentro de los estos se hacen las funciones y los procesos para cada una de las opciones del menú
+
+Ahi se encuetran varios tipos de funciones con un proceso distinto cada una. 
+
+◾La primer función(void ingresar), es donde se ingresan los datos personales y se usa el getline para leer una cadena (string). 
+![](https://i.ibb.co/QmGppJf/Whats-App-Image-2021-07-23-at-6-03-26-PM.jpg)
+
+◾La segunda función(void mostrar), es donde se muestran los datos ingresados en la primera funcion. 
+![](https://i.ibb.co/jG9vg9p/Whats-App-Image-2021-07-23-at-6-03-33-PM.jpg)
+
+◾La tercera función (void edad), es donde se va a calcula la edad del usuario. 
+
+Se evalúa una condición para calcular los días: esta permite identificar si el dia actual es mayor al dia de nacimiento, si es cierto se resta dia actual menos el dia de nacimiento, caso contrario al dia actual se le aumenta 30, al mes actual se le resta 1 y luego se resta dia actual y el dia de nacimiento.
+
+![](https://i.ibb.co/Sfjkyh6/Whats-App-Image-2021-07-23-at-6-03-45-PM.jpg)
+
+Se usa una condición para evaluar el cálculo de meses, la cual permite identificar si el mes actual es mayor al mes de nacimiento, si es menor se resta mes actual con el mes de nacimiento, caso contrario al mes actual se le aumenta 12, luego se resta mes actual y el mes de nacimiento.
+
+![](https://i.ibb.co/FnfZN2F/Whats-App-Image-2021-07-23-at-6-03-56-PM.jpg)
+
+Luego se resta el año actual con el año de nacimiento. 
+
+◾La cuarta función (void edad2), en la que se va a mostrar la edad, los meses que tiene y los dias.
+
+![](https://i.ibb.co/xMHtNW1/Whats-App-Image-2021-07-23-at-6-04-06-PM.jpg)
+
+◾La quinta función (void IMC), es donde se calcula el indice de masa corporal de una persona a partir del peso y la altura de la persona, luego se evalúa una condición, si el IMC es menor a 20 se muestra un mensaje indicando que debe subir de peso, si es menor a 24 lo felicita y si es mayor se indica que debe bajar su peso.
+
+![](https://i.ibb.co/98n2WTX/Whats-App-Image-2021-07-23-at-6-04-16-PM.jpg)
+
+◾La sexta funcíón (void guardar), es donde se alamacenan los datos ingresados y  se crea un archivo txt que se guarda donde el usuario tenga descargado el proyecto.
+Alli se usa el ofstream para crear un archivo, se agrega una variable que sirve para crear el archivo txt; se coloca el "open" para decirle al programa que nos abra y crea un archivo con el nombre (trabajo.txt), luego evalua una condición, si el archivo falla o no se crea muestre un mensaje de error, caso contrario guarde los datos ingresados en la primera función. 
+
+![](https://i.ibb.co/pWwwsGn/Whats-App-Image-2021-07-23-at-6-04-24-PM.jpg)
+
+◾La septima función (void rym), se utiliza para recuperar y mostrar los datos guardados en la sexta función (void guardar), donde usa el ifstream que busca el archivo creado en la sexta función y creamos la misma variable que en la sexta función, ademas crear otra variable de tipo string que nos va a sirve para que el programa muestre todo el texto que hay en el archivo de texto. 
+
+![](https://i.ibb.co/myG7NjW/Whats-App-Image-2021-07-23-at-6-04-31-PM.jpg)
 
 
+# INSTALACIÓN 🔧
+1. Primero debes estar dentro del repositorio.
+
+![](https://i.ibb.co/DpPZDMB/Captura.png)
+
+2. Una vez ahí, vas a encontrar un botón color verde llamado código donde te mostrara varias opciones.
+
+![](https://i.ibb.co/2vmqHC3/Captura1.png)
+
+3. Deberás elegir la opción "Descargar zip" y se descargara el archivo el cual deberás descomprimir 
+
+![](https://i.ibb.co/2KCP1bx/Captura2.png)
+
+4. Cuando lo tengas descargado das clic derecho sobre el archivo “zip” y pulsas extraer aquí 
+
+![](https://i.ibb.co/PTnkvSR/Captura-de-pantalla-65.png)
+
+5. Después de la extracción te dejará una carpeta con el nombre del repositorio.
+
+![](https://i.ibb.co/xfD9p5Q/Captura3.png)
+
+6. Dentro de esta carpeta obtendras el codigo del programa.
+
+![](https://i.ibb.co/GTQ9VfJ/Captura4.png)
+
+7. Por ultimo solo lo tienes que abrir. 
+
+![](https://i.ibb.co/R6mhJ49/Captura-de-pantalla-66.png)
+
+8.Y tendras el codigo listo para ejecutar 
+
+![](https://i.ibb.co/8gyGjnc/Captura-de-pantalla-67.png)
 
 
+# EJECUCIÓN 👨‍💻 
 
+1. Una vez obtenido el codigo nos dirijimos a la barra de herramientas ubicada en la pate superior.
 
+![](https://i.ibb.co/J2PBxsM/Captura10.png)
 
+2.	Aquí encontraremos el botón de compilar y ejecutar el cual vamos a usar para probar el programa.
 
+![](https://i.ibb.co/r6tK8dj/Captura11.png)
 
+3. Ejecutado el programa nos mostrará un menú y nos pedirá que escojamos una opción 
+
+![](https://i.ibb.co/WWFZhRb/Captura12.png)
+
+4.	Para la opción 1 habrá que llenar con nuestros datos. 
+
+![](https://i.ibb.co/GWb49sJ/20.png)
+
+5. La opción 2 va a calcular nuestra edad y para esto se debe ingresar la fecha actual
+
+![](https://i.ibb.co/1JLpvqk/21.png)
+
+6.	La opción 3 mostrará un mensaje dependiendo del dato que hallamos ingresado en nuestro peso.
+
+![](https://i.ibb.co/z8BLSbq/22.png)
+
+7. La opción 4 guardara los datos que ingresamos 
+
+![](https://i.ibb.co/SNp3mgQ/Captura16.png)
+
+8.	En la carpeta donde tenemos guardado el programa se creara un archivo de texto  que contendrá nuestros datos.
+
+![](https://i.ibb.co/BjTpbzb/Captura17.png)
+
+9. La opción 5 mostrará el archivo de texto con nuestros datos 
+
+![](https://i.ibb.co/bH6BKKz/23.png)
+
+10. Con la opción 0 salimos del programa  
+
+![](https://i.ibb.co/g4nd7Ph/Captura18.png)
+
+ESPERO QUE TE SIRVA DE MUCHA AYUDA NUESTRO PROGRAMA ✔
